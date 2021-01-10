@@ -1,0 +1,22 @@
+<form #formlist= 'ngForm' (submit)='insert(formlist.value)'>
+  <div id = "palindrome-component" class="form-group">
+    <label>Input the palindrome :</label>
+    <input id = "palindrome-input-id" class = "palindrome-input-class" type = "text" maxlength="100">
+  </div>
+  <div class="form-group">
+    <button type ="submit" class = "submit-btn">Submit</button>
+  </div>
+</form>
+<button id="button" (click)="sample()">clickme</button>
+<div id = "table-component">
+  <table>
+    <thead>
+      <th>Palindrome</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let value of values">{{value}}</tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>
